@@ -1,0 +1,10 @@
+img{
+    border-radius: 0px 0px 50px 50px;
+}
+
+@media screen and (max-width: 576px){
+    img{
+        border-radius: 0px 0px 10px 10px;
+    }
+    
+}
