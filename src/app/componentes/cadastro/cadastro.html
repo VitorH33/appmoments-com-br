@@ -1,1 +1,79 @@
-<p>cadastro works!</p>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12 text-center">
+            <h3>Novo Usuário</h3>
+        </div>
+    </div>
+
+    <div class="row ">
+        <div class="col-12">
+            <div class="mb-3">
+                <label for="txtNome" class="form-label">Seu Nome</label>
+                <input type="text" class="form-control" id="txtNome" placeholder="Seu nome" [(ngModel)]="cliente.nome">
+            </div>
+        </div>
+    </div>
+    <div class="row ">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="mb-3">
+                <label for="txtEmail" class="form-label">Seu Email</label>
+                <input type="email" class="form-control" id="txtEmail" placeholder="seu@email.com" [(ngModel)]="cliente.email">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="mb-3">
+                <label for="txtTelefone" class="form-label">Seu Telefone</label>
+                <input type="phone" class="form-control" id="txtTelefone" mask="(00) 00000-0000" placeholder="(11)91234-5678" [(ngModel)]="cliente.telefone">
+            </div>
+        </div>    
+
+    </div>
+    <div class="row ">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="mb-3">
+                <label for="txtSenha" class="form-label">Digite uma Senha</label>
+                <input type="password" class="form-control" id="txtSenha" [(ngModel)]="cliente.senha">
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <div class="mb-3">
+                <label for="txtSenha2" class="form-label">Confirme Sua Senha</label>
+                <input type="password" class="form-control" id="txtSenha2" [(ngModel)]="senhaExtra" (keyup)="confereSenha()">
+            </div>
+        </div>        
+    </div>
+    <div class="row">
+        <div class="col-12 text-center" id="senhaMsg">
+            {{ senhaMSG }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-12 text-center">
+            <button class="btn btn-dark" id="btnConfirma" [disabled]="cliente.senha != senhaExtra" (click)="enviarDados()">Confirmar Dados</button>
+        </div>
+    </div>
+
+</div>
+
+
+<button type="button" id="btnModal" style="visibility: hidden;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <!-- Modal -->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Resultado</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          {{modalMSG}}
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>

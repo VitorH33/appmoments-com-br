@@ -12,6 +12,7 @@ import { Profile } from './componentes/profile/profile';
 import { Novoevento } from './componentes/novoevento/novoevento';
 import { Galeria } from './componentes/galeria/galeria';
 import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,7 @@ import { FormsModule } from '@angular/forms';
     Novoevento,
     Galeria,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
