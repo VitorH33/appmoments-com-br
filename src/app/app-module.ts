@@ -13,6 +13,7 @@ import { Novoevento } from './componentes/novoevento/novoevento';
 import { Galeria } from './componentes/galeria/galeria';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { Navbar } from './componentes/navbar/navbar';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     Profile,
     Novoevento,
     Galeria,
+    Navbar,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [provideBrowserGlobalErrorListeners()],

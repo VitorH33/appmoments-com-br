@@ -1,1 +1,18 @@
-<p>meuseventos works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row">
+        <div class="col-12 mt-3">
+            <h4>Meus Eventos <a class="btn btn-primary">Adicionar Novo</a></h4>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-2"><strong>Data/Hora Inicio</strong></div>
+        <div class="col-5"><strong>Evento</strong></div>
+        <div class="col-1 text-center"><strong>Galeria</strong></div>
+        <div class="col-1 text-center"><strong>Detalhe</strong></div>
+    </div>
+    <div class="row" *ngFor="let ITEM of lista">
+        <div class="col-2">{{ITEM.inicio | date : 'dd/MM/yyyy - hh:mm'}}</div>
+        <div class="col-5">{{ITEM.titulo}}</div>
+    </div>
+</div>

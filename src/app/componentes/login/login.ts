@@ -7,7 +7,7 @@ import { LoginService } from '../../servicos/login';
 @Component({
   selector: 'app-login',
   templateUrl: './login.html',
-   standalone: false,
+  standalone: false,
   styleUrl: './login.css'
 })
 export class Login implements OnInit{
