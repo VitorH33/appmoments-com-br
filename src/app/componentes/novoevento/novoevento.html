@@ -1,1 +1,36 @@
-<p>novoevento works!</p>
+<app-navbar></app-navbar>
+<div class="container">
+    <div class="row mt-3">
+        <div class="col-12 text-start">
+            <h3>
+                <a routerLink="/myevents/"><i class="fa-solid fa-arrow-left"></i> </a>
+                Novo Evento
+            </h3>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="col-12">
+            <label for="txtNome">Nome do Seu Evento</label>
+            <input type="text" class="form-control">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="txtNome">Data/Hora Inicio</label>
+            <input type="datetime-local" class="form-control">
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 col-xl-6 col-xxl-6">
+            <label for="txtNome">Data/Hora Fim</label>
+            <input type="datetime-local" disabled class="form-control">
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-12">
+            <label for="txtFrase">Frase que irá aparecer na moldura (max 20 caracteres)</label>
+            <input type="text" class="form-control" maxlength="20">
+        </div>
+    </div>
+
+</div>

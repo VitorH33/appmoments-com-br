@@ -4,12 +4,14 @@ import { Home } from './componentes/home/home';
 import { Cadastro } from './componentes/cadastro/cadastro';
 import { Login } from './componentes/login/login';
 import { Meuseventos } from './componentes/meuseventos/meuseventos';
+import { Novoevento } from './componentes/novoevento/novoevento';
 
 const routes: Routes = [
   {path: '', component: Home},
   {path: 'login', component : Login},
   {path: 'signup', component: Cadastro},
-  {path: 'myevents', component: Meuseventos}
+  {path: 'myevents', component: Meuseventos},
+  {path: 'new', component: Novoevento}
 
 ];
 
