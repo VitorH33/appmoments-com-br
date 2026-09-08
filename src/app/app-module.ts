@@ -14,6 +14,7 @@ import { Galeria } from './componentes/galeria/galeria';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { Navbar } from './componentes/navbar/navbar';
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { Navbar } from './componentes/navbar/navbar';
     Galeria,
     Navbar,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, DatePipe],
   providers: [provideBrowserGlobalErrorListeners()],
   bootstrap: [App],
 })
