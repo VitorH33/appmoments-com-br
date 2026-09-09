@@ -14,8 +14,15 @@
     <div class="row" *ngFor="let ITEM of lista">
         <div class="col-2">{{ITEM.inicio | date : 'dd/MM/yyyy - hh:mm'}}</div>
         <div class="col-5">{{ITEM.titulo}}</div>
+        <div class="col-1 text-center">
+            <a [routerLink]="'/galeria'"><i class="fa-regular fa-image"></i> </a>
+        </div>
+        <div class="col-1 text-center">
+            <a [routerLink]="'/detalhe'"><i class="fa-solid fa-pen-to-square"></i> </a>
+        </div>
     </div>
     <div class="row mt-3" *ngIf="lista.length === 0">
         <div class="col-12">Nenhum evento encontrado.</div>
     </div>
+
 </div>
