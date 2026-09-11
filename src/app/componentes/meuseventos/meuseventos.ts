@@ -11,6 +11,7 @@ import { EventosService } from '../../servicos/eventos';
 })
 export class Meuseventos implements OnInit {
   public lista: EventoDTO[] = [];
+  public eventoSelecionado: EventoDTO | null = null;
   public eventoUUID: string = "";
   public urlPhoto: string = "";
   public constructor(
@@ -43,6 +44,14 @@ export class Meuseventos implements OnInit {
         alert("Erro ao recuperar eventos")
       }
     })
+  }
+
+  public abrirDetalhes(evento: EventoDTO): void {
+    this.eventoSelecionado = evento;
+  }
+
+  public fecharDetalhes(): void {
+    this.eventoSelecionado = null;
   }
 
 }
